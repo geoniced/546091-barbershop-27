@@ -1179,16 +1179,6 @@ input[type="radio"].visually-hidden {
   transform: rotate(-45deg);
 }
 
-.modal-show {
-  display: block;
-
-  animation: bounce 0.6s;
-}
-
-.modal-error {
-  animation: shake 0.6s;
-}
-
 .modal h2 {
   margin: 0;
   margin-bottom: 20px;
@@ -1326,5 +1316,27 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-map p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   margin: 0;
+}
+
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.modal-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.modal-error {
+  animation: shake 0.6s;
 }
